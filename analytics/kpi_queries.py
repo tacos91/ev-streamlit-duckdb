@@ -8,9 +8,9 @@ def get_connection():
 def avg_battery_capacity():
     con = get_connection()
     query = """
-        SELECT AVG(battery_capacity_kwh) AS avg_battery
+        SELECT AVG(battery_capacity_kWh) AS avg_battery
         FROM ev_data
-        WHERE battery_capacity_kwh IS NOT NULL
+        WHERE battery_capacity_kWh IS NOT NULL
     """
     result = con.execute(query).fetchone()[0]
     con.close()
@@ -44,10 +44,10 @@ def battery_type_distribution():
 def speed_vs_battery():
     con = get_connection()
     query = """
-        SELECT max_speed_kmh, battery_capacity_kwh
+        SELECT top_speed_kmh, battery_capacity_kWh
         FROM ev_data
-        WHERE max_speed_kmh IS NOT NULL
-          AND battery_capacity_kwh IS NOT NULL
+        WHERE top_speed_kmh IS NOT NULL
+          AND battery_capacity_kWh IS NOT NULL
     """
     df = con.execute(query).df()
     con.close()
