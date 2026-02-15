@@ -1,11 +1,13 @@
 import plotly.express as px
 import streamlit as st
 
+
 def show_avg_battery(avg_value):
     st.metric(
         label="🔋 Capacité moyenne de batterie (kWh)",
         value=f"{avg_value:.1f}"
     )
+
 
 def show_top_brands(df):
     fig = px.bar(
@@ -16,14 +18,20 @@ def show_top_brands(df):
     )
     st.plotly_chart(fig, width="stretch")
 
-def show_battery_distribution(df):
-    fig = px.pie(
+
+def show_avg_range_by_brand(df):
+    fig = px.bar(
         df,
-        names="battery_type",
-        values="total",
-        title="🔌 Répartition des types de batterie"
+        x="brand",
+        y="avg_range_km",
+        title="🚘 Autonomie moyenne par marque (km)",
+        labels={
+            "avg_range_km": "Autonomie moyenne (km)",
+            "brand": "Marque"
+        }
     )
     st.plotly_chart(fig, width="stretch")
+
 
 def show_speed_vs_battery(df):
     fig = px.scatter(
