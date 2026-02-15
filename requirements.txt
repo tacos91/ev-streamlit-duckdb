@@ -1,5 +1,0 @@
-streamlit==1.54.0
-pandas
-plotly
-duckdb
-numpy
