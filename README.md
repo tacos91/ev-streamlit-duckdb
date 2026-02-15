@@ -1,11 +1,11 @@
-# 📊 Application d’Analyse Multi-Datasets
+#  Application d’Analyse Multi-Datasets
 
-## 🎯 Objectif du projet
+##  Objectif du projet
 
 Cette application développée avec **Streamlit** permet d’analyser dynamiquement deux jeux de données :
 
-- 🛒 Ventes Walmart
-- 🚗 Véhicules Électriques
+-  Ventes Walmart
+-  Véhicules Électriques
 
 L’objectif est de proposer une analyse interactive combinant :
 
@@ -17,7 +17,7 @@ L’objectif est de proposer une analyse interactive combinant :
 
 ---
 
-## 🧱 Architecture du projet
+##  Architecture du projet
 
 EV-STREAMLIT-DUCKDB/
 │
@@ -44,31 +44,31 @@ EV-STREAMLIT-DUCKDB/
 
 ---
 
-## 📌 Description des modules
+##  Description des modules
 
-### 🔹 app.py
+###  app.py
 Point d’entrée principal de l’application.  
 Gère la navigation entre les datasets et la configuration globale.
 
-### 🔹 analytics/
+###  analytics/
 Contient la logique métier des dashboards :
 - Calcul des KPI
 - Application des filtres
 - Requêtes SQL via DuckDB
 - Génération des graphiques
 
-### 🔹 database/
+###  database/
 Gestion de la connexion et des interactions avec DuckDB.
 
-### 🔹 utils/
+###  utils/
 Fonctions utilitaires réutilisables (formatage, nettoyage, etc.).
 
-### 🔹 visualizations/
+###  visualizations/
 Centralisation des graphiques Plotly.
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 - Python
 - Streamlit
@@ -78,9 +78,9 @@ Centralisation des graphiques Plotly.
 
 ---
 
-## 📊 Fonctionnalités principales
+##  Fonctionnalités principales
 
-### 🛒 Module Walmart
+###  Module Walmart
 
 - Upload dynamique du CSV
 - Filtres : magasin, période, semaines spéciales
@@ -93,7 +93,7 @@ Centralisation des graphiques Plotly.
 
 ---
 
-### 🚗 Module Véhicules Électriques
+### Module Véhicules Électriques
 
 - Upload dynamique du CSV
 - Filtres : marque, segment, autonomie
@@ -106,7 +106,7 @@ Centralisation des graphiques Plotly.
 
 ---
 
-## 📈 Approche analytique
+##  Approche analytique
 
 Les indicateurs sont calculés via des requêtes SQL exécutées en mémoire grâce à DuckDB.
 
@@ -123,9 +123,9 @@ Les matrices de corrélation permettent d’identifier :
 
 ---
 
-## 🚀 Installation et exécution locale
+##  Installation et exécution locale
 
-### 1️⃣ Cloner le repository
+### Cloner le repository
 
 ```bash
 git clone https://github.com/tacos91/ev-streamlit-duckdb.git
@@ -136,7 +136,7 @@ pip install -r requirements.txt
 Lancer l'application 
 streamlit run app.py ou python -m streamlit run app.py
 
-🧪 Données
+ Données
 
 Les datasets sont importés dynamiquement via l’interface.
 Ils ne sont pas stockés dans le repository.
