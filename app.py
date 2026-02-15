@@ -37,6 +37,15 @@ dataset = st.sidebar.selectbox(
     ["Ventes Walmart", "Véhicules Électriques"]
 )
 
+# ===== AJOUT INES (Chef de Projet) =====
+st.sidebar.markdown("---")
+
+page = st.sidebar.radio(
+    "Navigation",
+    ["Dashboard", "À propos du projet"]
+)
+# =======================================
+
 # ==============================
 # CONTENU PRINCIPAL
 # ==============================
@@ -44,6 +53,7 @@ st.title("📊 Application d’Analyse Multi-Datasets")
 
 st.markdown("---")
 
+# On ne modifie PAS la logique existante
 if dataset == "Ventes Walmart":
     run_walmart_dashboard()
 else:
