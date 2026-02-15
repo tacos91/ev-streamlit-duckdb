@@ -37,14 +37,62 @@ dataset = st.sidebar.selectbox(
     ["Ventes Walmart", "Véhicules Électriques"]
 )
 
+# ===== Navigation ajoutée =====
+st.sidebar.markdown("---")
+
+page = st.sidebar.radio(
+    "Navigation",
+    ["Dashboard", "À propos du projet"]
+)
+
 # ==============================
 # CONTENU PRINCIPAL
 # ==============================
 st.title("📊 Application d’Analyse Multi-Datasets")
-
 st.markdown("---")
 
-if dataset == "Ventes Walmart":
-    run_walmart_dashboard()
-else:
-    run_ev_dashboard()
+if page == "Dashboard":
+    if dataset == "Ventes Walmart":
+        run_walmart_dashboard()
+    else:
+        run_ev_dashboard()
+
+elif page == "À propos du projet":
+    st.title("📘 À propos du projet")
+
+    st.markdown("""
+    ## 🎯 Objectif du projet
+
+    Cette application a été développée dans le cadre du MBA ESG – Management Opérationnel.
+
+    Elle permet :
+    - L’analyse multi-datasets
+    - Le calcul de KPI via SQL (DuckDB)
+    - La visualisation interactive avec Streamlit
+    - L’aide à la décision basée sur les données
+
+    ---
+
+    ## 👥 Organisation de l'équipe
+
+    🧑‍💼 **Chef de projet**  
+    Ines Taibi  
+
+    👨‍💻 **Développeur principal**  
+    Mathis KODIA  
+
+    👩‍💻 **Développeur**  
+    Myriam  bennani
+
+    🧪 **Test & QA**  
+    Aghilas Aissaoui  
+
+    ---
+
+    ## 🏗️ Architecture
+
+    - app.py : Routing principal  
+    - analytics/ : Logique métier  
+    - DuckDB : Requêtes SQL en mémoire  
+    - Plotly : Visualisations interactives  
+    """)
