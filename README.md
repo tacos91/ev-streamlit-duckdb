@@ -19,27 +19,27 @@ L’objectif est de proposer une analyse interactive combinant :
 
 ## 🧱 Architecture du projet
 
-📂 EV-STREAMLIT-DUCKDB
+EV-STREAMLIT-DUCKDB/
 │
-├── app.py
-├── analytics/
+├── app.py # Point d'entrée principal
+├── requirements.txt # Dépendances du projet
+├── README.md # Documentation
+│
+├── analytics/ # Logique métier des dashboards
 │ ├── walmart_dashboard.py
 │ ├── ev_dashboard.py
 │ └── kpi_queries.py
 │
-├── database/
+├── database/ # Gestion DuckDB
 │ └── duckdb_manager.py
 │
-├── utils/
+├── utils/ # Fonctions utilitaires
 │ └── helpers.py
 │
-├── visualizations/
+├── visualizations/ # Graphiques Plotly
 │ └── charts.py
 │
-├── data/
-│
-├── requirements.txt
-└── README.md
+└── data/ # Datasets (non versionnés)
 
 
 ---
