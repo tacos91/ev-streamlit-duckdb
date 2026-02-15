@@ -198,3 +198,9 @@ def run_ev_dashboard():
     with st.expander("Afficher les données filtrées"):
         st.write(f"Nombre de lignes : {len(df_filtre)}")
         st.dataframe(df_filtre, use_container_width=True)
+        st.download_button(
+        label="📥 Télécharger les données filtrées (CSV)",
+        data=df_filtre.to_csv(index=False),
+        file_name="ev_donnees_filtrees.csv",
+        mime="text/csv"
+    )
