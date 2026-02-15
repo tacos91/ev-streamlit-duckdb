@@ -37,7 +37,7 @@ dataset = st.sidebar.selectbox(
     ["Ventes Walmart", "Véhicules Électriques"]
 )
 
-# ===== Navigation ajoutée =====
+# ===== Navigation =====
 st.sidebar.markdown("---")
 
 page = st.sidebar.radio(
@@ -82,7 +82,7 @@ elif page == "À propos du projet":
     Mathis KODIA  
 
     👩‍💻 **Développeur**  
-    Myriam  bennani
+    Myriam Bennani  
 
     🧪 **Test & QA**  
     Aghilas Aissaoui  
